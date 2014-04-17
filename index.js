@@ -11,7 +11,7 @@ var exists = function(path) {
 module.exports = function() {
 	if (!exists('/dev/stdout')) return process.stdout;
 
-	var stream = fs.createWriteStream('/dev/stdout');
+	var stream = fs.createWriteStream('/dev/stdout', {fd:1});
 	stream._isStdio = true;
 	stream.isTTY = process.stdout.isTTY;
 	stream.end = function() {
