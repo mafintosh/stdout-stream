@@ -1,7 +1,15 @@
 var fs = require('fs');
 
+var exists = function(path) {
+	try {
+		return fs.existsSync(path);
+	} catch (err) {
+		return false;
+	}
+};
+
 module.exports = function() {
-	if (!fs.existsSync('/dev/stdout')) return process.stdout;
+	if (!exists('/dev/stdout')) return process.stdout;
 
 	var stream = fs.createWriteStream('/dev/stdout');
 	stream._isStdio = true;
