@@ -4,6 +4,8 @@ Non-blocking stdout stream
 
 	npm install stdout-stream
 
+[![build status](https://secure.travis-ci.org/mafintosh/stdout-stream.png)](http://travis-ci.org/mafintosh/stdout-stream)
+
 ## Rant
 
 Try saving this example
