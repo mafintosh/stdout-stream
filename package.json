@@ -1,0 +1,6 @@
+{
+  "name": "stdout-stream",
+  "description": "Non-blocking stdout stream",
+  "version": "0.0.0",
+  "repository": "mafintosh/stdout-stream"
+}
