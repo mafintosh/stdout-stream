@@ -1,5 +1,5 @@
 var fs = require('fs');
-var stream = require('stream');
+var Writable = require('readable-stream/writable');
 
 var exists = function(path) {
 	try {
@@ -12,7 +12,7 @@ var exists = function(path) {
 module.exports = function() {
 	if (!exists('/dev/stdout')) return process.stdout;
 
-	var s = new stream.Writable({highWaterMark:0});
+	var s = new Writable({highWaterMark:0});
 
 	var cb;
 	var data;
