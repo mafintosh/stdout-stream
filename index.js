@@ -10,6 +10,9 @@ var exists = function(path) {
 };
 
 module.exports = function() {
+//	process.stdout.on('error', console.error);
+//	return process.stdout;
+
 	if (!exists('/dev/stdout')) return process.stdout;
 
 	var s = new Writable({highWaterMark:0});
@@ -43,9 +46,12 @@ module.exports = function() {
 
 	s._isStdio = true;
 	s.isTTY = process.stdout.isTTY;
-	s.end = function() {
-		throw new Error('process.stdout cannot be closed.');
-	};
+
+	s.on('finish', function() {
+		fs.close(1, function(err) {
+			if (err) s.emit('error', err);
+		});
+	});
 
 	return s;
 }();
