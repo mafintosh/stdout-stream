@@ -3,7 +3,7 @@ var proc = require('child_process');
 var path = require('path');
 
 tape('print to stdout', function(t) {
-	proc.exec(process.execPath+' '+path.join(__dirname,'fixtures','hello-world.js'), function(err, stdout) {
+	proc.exec('"'+process.execPath+'" '+path.join(__dirname,'fixtures','hello-world.js'), function(err, stdout) {
 		t.ok(!err);
 		t.same(stdout,'hello\nworld\n');
 		t.end();
@@ -11,7 +11,7 @@ tape('print to stdout', function(t) {
 });
 
 tape('end stdout', function(t) {
-	var ch = proc.exec(process.execPath+' '+path.join(__dirname,'fixtures','end.js'));
+	var ch = proc.exec('"'+process.execPath+'" '+path.join(__dirname,'fixtures','end.js'));
 	var buf = [];
 	var processOnExit = false;
 	var stdoutOnEnd = false;
