@@ -10,8 +10,6 @@ var exists = function(path) {
 };
 
 module.exports = function() {
-	if (!exists('/dev/stdout')) return process.stdout;
-
 	var s = new Writable({highWaterMark:0});
 
 	var cb;
