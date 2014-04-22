@@ -8,7 +8,7 @@ Non-blocking stdout stream
 
 ## Rant
 
-Try saving this example
+Try saving this example as `example.js`
 
 ``` js
 console.error('start');
