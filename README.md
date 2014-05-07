@@ -4,7 +4,9 @@ Non-blocking stdout stream
 
 	npm install stdout-stream
 
-[![build status](https://secure.travis-ci.org/mafintosh/stdout-stream.png)](http://travis-ci.org/mafintosh/stdout-stream)
+[![build status](http://img.shields.io/travis/mafintosh/level-filesystem.svg?style=flat)](http://travis-ci.org/mafintosh/stdout-stream)
+![dat](http://img.shields.io/badge/Development%20sponsored%20by-dat-green.svg?style=flat)
+
 
 ## Rant
 
