@@ -22,6 +22,7 @@ module.exports = function() {
 	};
 
 	var onwrite = function(err, written) {
+		if (err && err.code === 'EPIPE') return cb()
 		if (err && err.code === 'EAGAIN' && tries++ < 30) return setTimeout(write, 10);
 		if (err) return cb(err);
 
