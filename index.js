@@ -29,7 +29,7 @@ module.exports = function() {
 		tries = 0;
 		if (offset + written >= data.length) return cb();
 
-		offset = written;
+		offset += written;
 		write();
 	};
 
