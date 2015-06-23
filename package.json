@@ -1,7 +1,7 @@
 {
   "name": "stdout-stream",
   "description": "Non-blocking stdout stream",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "repository": "mafintosh/stdout-stream",
   "devDependencies": {
     "tape": "~2.12.3"
