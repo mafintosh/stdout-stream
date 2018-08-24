@@ -1,7 +1,7 @@
 {
   "name": "stdout-stream",
   "description": "Non-blocking stdout stream",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "repository": "mafintosh/stdout-stream",
   "devDependencies": {
     "tape": "~2.12.3"
@@ -11,5 +11,6 @@
   },
   "dependencies": {
     "readable-stream": "^2.0.1"
-  }
+  },
+  "license": "MIT"
 }
