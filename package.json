@@ -11,5 +11,6 @@
   },
   "dependencies": {
     "readable-stream": "^2.0.1"
-  }
+  },
+  "license": "MIT"
 }
