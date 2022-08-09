@@ -4,7 +4,7 @@
   "version": "1.4.1",
   "repository": "mafintosh/stdout-stream",
   "devDependencies": {
-    "tape": "~5.5.3"
+    "tape": "^5.5.3"
   },
   "scripts": {
     "test": "tape test/index.js"
