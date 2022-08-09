@@ -20,7 +20,7 @@ tape('end stdout', function(t) {
 		buf.push(data);
 	});
 	ch.stdout.on('end', function() {
-		t.same(Buffer.concat(buf).toString(), 'stdout');
+		t.same(buf.join(), 'stdout');
 		t.ok(!processOnExit);
 		stdoutOnEnd = true;
 	});

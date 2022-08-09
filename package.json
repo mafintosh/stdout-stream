@@ -4,13 +4,13 @@
   "version": "1.4.1",
   "repository": "mafintosh/stdout-stream",
   "devDependencies": {
-    "tape": "~2.12.3"
+    "tape": "~5.5.3"
   },
   "scripts": {
     "test": "tape test/index.js"
   },
   "dependencies": {
-    "readable-stream": "^2.0.1"
+    "readable-stream": "^4.1.0"
   },
   "license": "MIT"
 }
