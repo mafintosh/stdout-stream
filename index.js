@@ -43,11 +43,11 @@ module.exports = function() {
 	s._isStdio = true;
 	s.isTTY = process.stdout.isTTY;
 
-	s.on('finish', function() {
+	s._final = function(cb) {
 		fs.close(1, function(err) {
-			if (err) s.emit('error', err);
+			cb(err);
 		});
-	});
+	};
 
 	return s;
 }();
