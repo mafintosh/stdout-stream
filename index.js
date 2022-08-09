@@ -1,5 +1,5 @@
 var fs = require('fs');
-var Writable = require('readable-stream/writable');
+var { Writable } = require('readable-stream');
 
 var exists = function(path) {
 	try {
